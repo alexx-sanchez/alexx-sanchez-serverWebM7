@@ -12,5 +12,5 @@
         echo "<b>'".$fila['not_titular']."</b>'->".$fila['not_cos']."<br>";
     }
     echo "<hr>";
-
+    $dataBase->close();
 ?>
