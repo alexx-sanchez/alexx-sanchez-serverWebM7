@@ -1,7 +1,7 @@
 <?php
     $dataBase = new SQLite3('diariLocal.db');
 
-    $resultats = $dataBase->query("SELECT * FROM noticies order by not_data desc");
+    $resultats = $dataBase->query("SELECT * FROM noticies WHERE not_data LIKE '2025-02-%' ORDER BY not_data DESC");
 
     while ($fila = $resultats->fetchArray(SQLITE3_ASSOC)) {
         echo "ID: ". $fila['not_id'] . "<br>";
